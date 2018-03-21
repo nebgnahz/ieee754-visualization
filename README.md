@@ -1,3 +1,8 @@
+# Note
+
+This repository has been modified to visualize single precision floating point. For details, please see [the original repository](https://github.com/bartaz/ieee754-visualization). Changes are ugly hacks, and they are not worth creating PR to the original repository.
+
+
 # IEEE 754 Double Precision Floating Point Visualization
 
 It's an interactive visualization of how double precision floating point representation works.
