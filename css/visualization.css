@@ -91,7 +91,6 @@ body {
 .visualization-bits .exponent-wrapper { top: 0px; }
 .visualization-bits.expanded .exponent-wrapper { top: 220px; }
 
-
 .visualization-bits .full-equation {
     opacity: 1;
     position: absolute;
@@ -110,7 +109,7 @@ body {
 
 .significand-wrapper .bits::before,
 .significand-wrapper .bits::after {
-    content: "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    content: "0000000000000000000000000000000";
     position: absolute;
     font-size: 20px;
     font-family: monospace;

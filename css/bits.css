@@ -174,12 +174,12 @@
 }
 
 .exponent-wrapper .bits-wrapper-title {
-    width: 165px;
+    width: 120px;  /* 165px; */
 }
 
 .significand-wrapper .bits-wrapper-title,
 .significand-wrapper .math {
-    width: 780px;
+    width: 345px;  /* 780px; */
 }
 
 .point-slider {
@@ -188,7 +188,7 @@
     top: 50px;
     opacity: 0;
     pointer-events: none;
-    width: 780px;
+    width: 345px;  /* 780px;  */
 }
 
 label[for=point-slider] {

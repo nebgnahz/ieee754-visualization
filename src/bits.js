@@ -101,7 +101,7 @@ function updateNumber( values ) {
     b += exponent;
     b += significand;
 
-    var f = ieee754.binaryStringToFloat64( b );
+    var f = ieee754.binaryStringToFloat32( b );
     setNumberInputValue( f );
 }
 
@@ -183,7 +183,7 @@ function updateMath( representation ) {
     //
     // -- http://en.wikipedia.org/wiki/Denormal_number
 
-    if (representation.exponentNormalizedZero == -1023) {
+    if (representation.exponentNormalizedZero == -127) {
 
         representation.exponentZero = representation.exponent + 1;
         representation.exponentNormalizedZero = representation.exponentNormalized + 1;
@@ -235,7 +235,7 @@ function updateMath( representation ) {
 
 function updateVisualizatoin() {
     var number = getInputNumberValue();
-    var representation = ieee754.toIEEE754Parsed( number );
+    var representation = ieee754.toIEEE754F32Parsed( number );
 
     updateBinary( representation );
     updateMath( representation );
@@ -364,7 +364,7 @@ function getCurrentExponentNormalizedValue() {
 
 function updateExponentNormalizedValue( value ) {
     var exponent = Number(value);
-    updateNumber( { exponent: exponent + 1023 } );
+    updateNumber( { exponent: exponent + 127 } );
 }
 dynks( exponentNormalizedElement, getCurrentExponentNormalizedValue, updateExponentNormalizedValue );
 
